@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Webpage</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #0d1117;
+            color: #c9d1d9;
+            font-size: 16px;
+        }
+        header {
+            background-color: #161b22;
+            color: white;
+            padding: 0.5rem 1rem;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+        }
+        header img {
+            height: 40px;
+            width: 40px;
+            border-radius: 50%;
+        }
+        .header-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            width: 100%;
+        }
+        nav {
+            display: flex;
+            justify-content: flex-start;
+            gap: 25px;
+            margin-left: 20px;
+        }
+        nav a {
+            color: #c9d1d9;
+            text-decoration: none;
+            font-size: 16px;
+        }
+        nav a:hover {
+            color: #58a6ff;
+        }
+        .header-actions {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-left: auto;
+        }
+        .header-actions .search-box {
+            position: relative;
+            display: flex;
+            align-items: center;
+            border: 1px solid #30363d;
+            border-radius: 30px;
+            background-color: #161b22;
+            padding: 5px 10px;
+        }
+        .header-actions .search-box input[type="text"] {
+            border: none;
+            background: transparent;
+            color: #c9d1d9;
+            padding: 5px;
+            outline: none;
+            width: 200px;
+        }
+        .header-actions .search-box input[type="text"]::placeholder {
+            color: #8b949e;
+        }
+        .header-actions .search-box button {
+            border: none;
+            background: transparent;
+            cursor: pointer;
+            padding: 0 5px;
+        }
+        .header-actions .search-box button img {
+            width: 20px;
+            height: 20px;
+        }
+        .header-actions a {
+            padding: 5px 10px;
+            color: #c9d1d9;
+            text-decoration: none;
+            border: 1px solid #30363d;
+            border-radius: 5px;
+            background-color: #161b22;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        .header-actions a:hover {
+            background-color: #58a6ff;
+            color: #0d1117;
+        }
+        main {
+            padding: 6rem 2rem 2rem;
+            text-align: center;
+        }
+        footer {
+            background-color: #161b22;
+            color: #8b949e;
+            text-align: center;
+            padding: 4px;
+            font-size: 14px;
+        }
+        .footer-links {
+            margin-top: 10px;
+        }
+        .footer-links a {
+            color: #3b4249;
+            text-decoration: none;
+            margin: 0 10px;
+            font-size: 14px;
+        }
+        .footer-links a:hover {
+            color: #58a6ff;
+        }
+    </style>
+    <script>
+        function searchFunction() {
+            const query = document.querySelector('.header-actions .search-box input[type="text"]').value;
+            alert('Search for: ' + query);
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <img src="Welcome Scan.jpg" alt="Logo">
+            <nav>
+                <a href="home.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+            <div class="header-actions">
+                <div class="search-box">
+                    <input type="text" placeholder="Search...">
+                    <button onclick="searchFunction()">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Magnifying_glass_icon.svg/1024px-Magnifying_glass_icon.svg.png" alt="Search">
+                    </button>
+                </div>
+                <a href="signin.html">Sign In</a>
+                <a href="signup.html">Sign Up</a>
+            </div>
+        </div>
+    </header>
+    <main>
+        <h2>Home Section</h2>
+        <p>This is the main content area of the webpage.</p>
+        <h2>About Section</h2>
+        <p>Learn more about us in this section.</p>
+        <h2>Contact Section</h2>
+        <p>Get in touch with us through this section.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse eget elementum ipsum. Morbi risus nibh, pretium interdum ligula quis, semper rhoncus dui. Ut nunc sem, sollicitudin quis tempor in, fringilla vitae eros. Suspendisse non leo ut turpis suscipit vehicula. Aliquam et elit et lorem mollis eleifend consectetur id magna. Proin dapibus eros nibh, in aliquet est vulputate quis. Aliquam luctus augue et massa finibus pharetra.
+
+            Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Suspendisse tristique nisl vitae nibh fermentum, eget pulvinar justo facilisis. Aenean consequat nisl neque, a fringilla eros hendrerit ut. Vivamus varius nulla justo, at lobortis diam ultrices quis. Aenean gravida egestas mauris sed dictum. Donec id risus diam. Nulla scelerisque pellentesque nisl, nec aliquet justo hendrerit vitae. Vestibulum egestas eros eget bibendum congue. Etiam ac arcu lacus. In placerat odio sed tellus condimentum, ut malesuada arcu euismod.
+            
+            Praesent et lectus eu metus condimentum condimentum vitae sit amet justo. Vestibulum eu metus tellus. Etiam mattis egestas nisi, et ornare nisi pellentesque quis. Cras dapibus, augue vitae feugiat porttitor, purus mauris interdum dolor, at iaculis lectus orci a leo. Etiam sed ante viverra, scelerisque metus id, sagittis nisl. Nulla eu egestas massa, at eleifend neque. Aenean cursus, tortor viverra dapibus mollis, lorem ante dictum risus, et lacinia quam diam quis sapien. Etiam vel magna arcu. Nunc sapien est, congue sed nisi sit amet, volutpat volutpat tortor. Mauris facilisis pharetra faucibus.
+            
+            Vivamus pulvinar est id tristique consequat. Nullam semper condimentum aliquam. Proin nec volutpat lacus, sed molestie erat. Vivamus mattis facilisis fermentum. Suspendisse lobortis ex ipsum, in interdum est volutpat at. Proin vel nisi aliquet, elementum risus elementum, scelerisque lacus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Pellentesque id cursus eros. Maecenas orci ipsum, tincidunt convallis ipsum vitae, bibendum bibendum nisi. Duis sollicitudin dignissim eleifend. Etiam luctus, nisi sit amet gravida elementum, enim ante rhoncus risus, sed mollis urna est non nulla. Aenean eget ante venenatis nunc malesuada molestie consectetur ut justo.
+            
+            Nunc tempor nibh vitae nunc cursus aliquet. Integer congue, magna non blandit semper, quam ipsum blandit enim, in ornare nisi elit in diam. Sed erat enim, porta a pharetra ac, dictum at dolor. Nulla sit amet pellentesque lectus. Nullam quis porttitor ligula. Suspendisse faucibus turpis ac enim maximus, sed viverra libero euismod. Phasellus tempus ipsum et urna egestas fringilla. Cras rhoncus dolor sed malesuada suscipit. Quisque sit amet eros eu lacus eleifend sollicitudin ac eget augue. Nam pulvinar ligula ac felis aliquet, non pulvinar nisi ultricies.</p>
+    </main>
+    <footer>
+        <div class="footer-links">
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact Us</a>
+            <a href="terms.html">Terms and Conditions</a>
+            <a href="signin.html">Sign In</a>
+            <a href="signup.html">Sign Up</a>
+            <a href="privacypolicy.html">Privacy Policy</a>
+        </div>
+        <p>&copy; 2025 My Webpage. All rights reserved.</p>
+    </footer>
+</body>
+</html>
